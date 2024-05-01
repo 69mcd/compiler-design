@@ -37,5 +37,7 @@ expression_tree.right.right = Node('5')
 
 generator = ThreeAddressCodeGenerator()
 generator.generate_code(expression_tree)
+
+print("{:<10}{:<10}{:<10}{:<10}".format("Operator", "Arg1", "Arg2", "Result"))
 for op, arg1, arg2, result in generator.code:
-    print(f" operator {op} args1 {arg1} args2 {arg2} result {result}")
+    print("{:<10}{:<10}{:<10}{:<10}".format(op, arg1, arg2, result))
